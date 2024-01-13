@@ -67,7 +67,6 @@ class Seo
             ...$options,
         ])
             ->withHeaders([
-                'Accept-Encoding' => 'gzip, deflate',
                 ...$headers,
             ]);
 
