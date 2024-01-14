@@ -63,10 +63,11 @@ class Seo
         $options = (array) config('seo.http.options', []);
 
         $response = $this->http::withOptions([
-            'decode_content' => false,
+            //'decode_content' => false,
             ...$options,
         ])
             ->withHeaders([
+                'Accept-Encoding' => 'gzip, deflate, br, compress',
                 ...$headers,
             ]);
 
